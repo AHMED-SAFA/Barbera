@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "726868659297",
+    "project_id": "barbera-7cd7f",
+    "storage_bucket": "barbera-7cd7f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:726868659297:android:e10dfead08cd513fc66e20",
+        "android_client_info": {
+          "package_name": "com.example.android.barbera"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "726868659297-v3ifrbdmr49hsa0l80599vqvfv97e5bi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyTqm-5Q8GSoWV3P2CZcKVt8ev-9JqA9U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "726868659297-v3ifrbdmr49hsa0l80599vqvfv97e5bi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

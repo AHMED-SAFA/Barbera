@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,8 +18,37 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Barbera"
         tools:targetApi="31">
+
+        <activity
+            android:name=".providers"
+            android:exported="false"
+            android:parentActivityName=".homePage" />
+        <activity
+            android:name=".about__us"
+            android:exported="false" />
+        <activity
+            android:name=".service"
+            android:exported="false" />
+        <activity
+            android:name=".Appoint"
+            android:exported="false" />
+        <activity
+            android:name=".homePage"
+            android:exported="false" />
+        <activity
+            android:name=".welcom"
+            android:exported="false" />
+        <activity
+            android:name=".reg_page"
+            android:exported="false" />
+        <activity
+            android:name=".login_reg"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".splash_logo"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
