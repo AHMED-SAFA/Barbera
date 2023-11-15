@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="@string/home"
+        android:id="@+id/home_id"
+        android:icon="@drawable/baseline_home_24"/>
+
+    <item
+        android:title="@string/share"
+        android:id="@+id/share"
+        android:icon="@drawable/share_24"/>
+
+</menu>

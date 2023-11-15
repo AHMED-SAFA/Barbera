@@ -1,21 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="@string/home"
-        android:id="@+id/home_id"
-        android:icon="@drawable/baseline_home_24"/>
-    <item android:title="@string/share"
-    android:id="@+id/share"
-    android:icon="@drawable/share_24"/>
+        <item
+            android:title="@string/home"
+            android:id="@+id/home_id"
+            android:icon="@drawable/baseline_home_24"/>
 
-    <item android:title="@string/cart"
-        android:id="@+id/cart"
-        app:showAsAction="always"
-        android:icon="@drawable/baseline_add_shopping_cart_24"/>
+    <item
+            android:title="Profile"
+            android:id="@+id/profile_id"
+            android:icon="@drawable/baseline_account_circle_24"/>
 
-    <item android:title="@string/about_us"
-    android:id="@+id/about_usid"
-    android:icon="@drawable/about_us"/>
+    <item android:title="Details">
+        <menu
+            xmlns:android="http://schemas.android.com/apk/res/android">
+            <!-- Section 2: Profile and Appointments -->
+            <group android:id="@+id/group_section2">
+                <item
+                    android:title="Update Password"
+                    android:id="@+id/Update_id"
+                    android:icon="@drawable/baseline_contact_emergency_24" />
+                <item
+                    android:title="Appointments"
+                    android:id="@+id/appoint_idid"
+                    android:icon="@drawable/baseline_note_alt_24" />
+            </group>
+        </menu>
+    </item>
 
+    <item android:title="Communicate">
+        <menu
+            xmlns:android="http://schemas.android.com/apk/res/android">
+            <!-- Section 3: About Us and Feedback -->
+            <group android:id="@+id/group_section3">
+                <item
+                    android:title="@string/about_us"
+                    android:id="@+id/about_usid"
+                    android:icon="@drawable/about_us"/>
+                <item
+                    android:title="Send Feedback"
+                    android:id="@+id/feed_id"
+                    android:icon="@drawable/feedback"/>
+                <item
+                    android:title="@string/share"
+                    android:id="@+id/share"
+                    android:icon="@drawable/share_24"/>
+                <item
+                    android:title="Logout"
+                    android:id="@+id/logout"
+                    android:icon="@drawable/baseline_logout_24"/>
+            </group>
+        </menu>
+    </item>
 </menu>

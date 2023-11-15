@@ -9,6 +9,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class login_reg extends AppCompatActivity
 {
@@ -16,6 +19,8 @@ public class login_reg extends AppCompatActivity
      Button sinup;
      EditText emaill,passwrd;
      FirebaseAuth auth;
+     FirebaseDatabase database;
+     DatabaseReference usersRef;
 
     @Override
     protected void onCreate (Bundle savedInstanceState) {
@@ -26,7 +31,12 @@ public class login_reg extends AppCompatActivity
         sinup = findViewById(R.id.signup_button_id);
         emaill = findViewById(R.id.signup_email_id);
         passwrd = findViewById(R.id.signup_password_id);
+
+        //database init
         auth = FirebaseAuth.getInstance();
+        database = FirebaseDatabase.getInstance();
+        usersRef = database.getReference("users");
+
 
         sinup.setOnClickListener(view ->
         {
@@ -50,8 +60,17 @@ public class login_reg extends AppCompatActivity
                         Toast.makeText(this, "Already exists!", Toast.LENGTH_SHORT).show();
                     }
                     else if(task.isSuccessful()){
+
+                        FirebaseUser firebaseUser = auth.getCurrentUser();
+                        String uid = firebaseUser.getUid();
+                        String userEmail = firebaseUser.getEmail();
+                        usersRef.child(uid).child("email").setValue(userEmail);
+
+                        finish();
+
                         Toast.makeText(login_reg.this, "Signup Successful", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(login_reg.this, reg_page.class));
+
                     }
                     else
                     {

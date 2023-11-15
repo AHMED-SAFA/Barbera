@@ -1,4 +1,5 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -7,211 +8,54 @@
         android:layout_width="match_parent"
         android:layout_height="60sp"
         android:id="@+id/toolbar_id"
-        android:background="#DA89EF"
+        android:background="#EFCFF8"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
         android:paddingBottom="6sp"
-        app:title="BarberA"
-        />
+        app:title="Providers"/>
 
-    <ScrollView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#D3E2EF"
-        android:layout_above="@id/bottomView"
-        android:layout_below="@id/toolbar_id">
+        android:background="#0E0225"
+        android:layout_below="@id/toolbar_id"
+        android:layout_above="@id/bottomView">
 
-        <LinearLayout
-            android:background="#140435"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-            <GridLayout
+            <TextView
+                android:id="@+id/txt_id"
                 android:layout_width="match_parent"
-                android:rowCount="5"
-                android:layout_gravity="center_horizontal"
-                android:columnCount="1"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:text="Barber Shops"
+                android:textColor="@color/white"
+                android:textSize="50sp"
+                android:gravity="center"
+                android:fontFamily="sans-serif-smallcaps"
+                android:layout_marginTop="25sp" />
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_margin="10sp"
-                    android:layout_height="170sp"
-                    android:layout_rowWeight="1"
-                    android:layout_row="0"
-                    app:cardCornerRadius="15dp"
-                    android:layout_column="0">
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D5E2ED"
+                android:layout_marginTop="30sp"
+                android:layout_marginBottom="20sp"
+                android:layout_marginLeft="15sp"
+                android:divider="#0E0225"
+                android:dividerHeight="10sp"
+                android:layout_marginRight="15sp"
+                android:layout_below="@id/txt_id"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="#B8CFE3">
+        </RelativeLayout>
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="30sp"
-                            android:layout_marginLeft="40sp"
-                            android:src="@drawable/person"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Name      : Shay\nAge         : 31\nPassion  :"
-                            android:textColor="@color/black"
-                            android:textSize="20sp"
-                            android:layout_marginLeft="190sp"
-                            android:layout_marginTop="50sp"
-                            />
-
-                    </RelativeLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_margin="10sp"
-                    android:layout_height="170sp"
-                    app:cardCornerRadius="15dp"
-                    android:layout_row="1"
-                    android:layout_column="0">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="#B8CFE3">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="30sp"
-                            android:layout_marginLeft="40sp"
-                            android:src="@drawable/person"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="190sp"
-                            android:layout_marginTop="50sp"
-                            android:text="Name      : Patric\nAge         : 31\nPassion  :"
-                            android:textColor="@color/black"
-                            android:textSize="20sp" />
-
-                    </RelativeLayout>
-
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_margin="10sp"
-                    android:layout_height="170sp"
-                    app:cardCornerRadius="15dp"
-                    android:layout_row="2"
-                    android:layout_column="0">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="#B8CFE3">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="30sp"
-                            android:layout_marginStart="40sp"
-                            android:src="@drawable/person"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Name      : Cormac\nAge         : 25\nPassion  :"
-                            android:textColor="@color/black"
-                            android:textSize="20sp"
-                            android:layout_marginStart="190sp"
-                            android:layout_marginTop="50sp"
-                            />
-
-                    </RelativeLayout>
-
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_margin="10sp"
-                    android:layout_height="170sp"
-                    app:cardCornerRadius="15dp"
-                    android:layout_row="3"
-                    android:layout_column="0">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="#B8CFE3">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="30sp"
-                            android:layout_marginLeft="40sp"
-                            android:src="@drawable/person"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Name      : Connor\nAge         : 29\nPassion  :"
-                            android:textColor="@color/black"
-                            android:textSize="20sp"
-                            android:layout_marginLeft="190sp"
-                            android:layout_marginTop="50sp"
-                            />
-                    </RelativeLayout>
-
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_margin="10sp"
-                    android:layout_height="170sp"
-                    app:cardCornerRadius="15dp"
-                    android:layout_row="4"
-                    android:layout_column="0">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="#B8CFE3">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="30sp"
-                            android:layout_marginLeft="40sp"
-                            android:src="@drawable/person"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Name      : Ezio\nAge         : 35\nPassion  :"
-                            android:textColor="@color/black"
-                            android:textSize="20sp"
-                            android:layout_marginLeft="190sp"
-                            android:layout_marginTop="50sp"
-                            />
-                    </RelativeLayout>
-
-
-                </androidx.cardview.widget.CardView>
-
-            </GridLayout>
-        </LinearLayout>
-    </ScrollView>
+    </RelativeLayout>
 
     <LinearLayout
         android:id="@+id/bottomView"
@@ -223,9 +67,13 @@
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_id"
             android:layout_width="match_parent"
-            android:background="#DA89EF"
-            app:menu="@menu/header_item"
+            android:background="#EFCFF8"
+            app:itemIconTint="@color/black"
+            app:itemTextColor="@color/black"
+            app:menu="@menu/provider_bottom"
             android:layout_height="60sp"/>
-    </LinearLayout>
 
+    </LinearLayout>
 </RelativeLayout>
+
+

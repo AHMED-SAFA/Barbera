@@ -9,20 +9,20 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.widget.TextView;
+import android.widget.ImageView;
 
 public class about__us extends AppCompatActivity {
 
     private static final int CALL_PERMISSION_REQUEST_CODE = 101;
-    TextView textView;
+    ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
 
-        textView = findViewById(R.id.number_id);
+        imageView = findViewById(R.id.number_id);
 
-        textView.setOnClickListener(v -> {
+        imageView.setOnClickListener(v -> {
 
             if (ContextCompat.checkSelfPermission(about__us.this, Manifest.permission.CALL_PHONE)
                     != PackageManager.PERMISSION_GRANTED) {

@@ -8,7 +8,7 @@
     <string name="reg">Register</string>
     <string name="sin_up">Sign up</string>
     <string name="alrdy">Already have account?</string>
-    <string name="nearby">Nearby Salon</string>
+    <string name="nearby">Search Salon</string>
     <string name="Service_Salon">Providers</string>
     <string name="Appoint">Appoint</string>
     <string name="Services">Services</string>
@@ -21,5 +21,5 @@
     <string name="cart">Cart</string>
     <string name="about_us">About Us</string>
     <string name="my_number">01786061922</string>
-    <string name="contact">Contact</string>
+    <string name="contact">Contact with the owner</string>
 </resources>

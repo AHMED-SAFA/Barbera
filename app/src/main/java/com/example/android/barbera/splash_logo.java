@@ -18,12 +18,10 @@ public class splash_logo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_logo);
 
-//        getSupportActionBar().hide();
-//        setContentView(R.layout.activity_splash_logo);
-
         progressBar = findViewById(R.id.progress_bar);
 
-        Thread thread = new Thread(() -> {
+        Thread thread = new Thread(() ->
+        {
             doWork();
             startApp();
         });
