@@ -109,7 +109,7 @@ public class homePage extends AppCompatActivity implements NavigationView.OnNavi
         {
             FirebaseAuth.getInstance().signOut();
             finish();
-            Intent intent = new Intent(homePage.this, reg_page.class);
+            Intent intent = new Intent(homePage.this, reg_page.class);;
             startActivity(intent);
         }
         if(item.getItemId() == R.id.feed_id){
