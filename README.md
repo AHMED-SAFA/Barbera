@@ -43,7 +43,7 @@
   <img src="https://github.com/user-attachments/assets/7deea5d1-b92b-4b20-9ecd-d9cea1f97d2a" height="200" style="margin: 10px;">
   <br>
 </div>
-<p>For image picker, the below dependency is used:</p>
+<p>For image picker, the below dependency is implemented:</p>
 <pre><code>com.github.dhaval2404:imagepicker-support:1.7.1</code></pre>
 Visit: <a target="_blank" href="https://github.com/Dhaval2404/ImagePicker">ImagePicker</a>
 </details>
@@ -84,7 +84,7 @@ Visit: <a target="_blank" href="https://github.com/Dhaval2404/ImagePicker">Image
 <strong>Salon Providers</strong>
 </summary>
 <br>
-<p>Locate nearby salons on an interactive map, view detailed information about each salon, and get directions.</p>
+<p>Locate nearby salons on an interactive map, view detailed information about each salon, and get directions. JSON is used to implement the function.</p>
 <br>
 <div align="center">
   <img src="https://github.com/user-attachments/assets/c0c62b4e-5f54-4898-b1e0-907566253faf" height="200" style="margin: 10px;">
